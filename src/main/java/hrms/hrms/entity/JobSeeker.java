@@ -2,9 +2,7 @@ package hrms.hrms.entity;
 
 import java.sql.Date;
 import java.time.LocalDate;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,8 +23,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "job_seekers")
-public class JobSeeker {
 	
+public class JobSeeker {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "job_seeker_id")
