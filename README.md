@@ -8,8 +8,8 @@ It follows the REST API architecture and implements **DTO**, **Request-Response 
 
 ##  Features
 - **City Management**: Add and list cities.
-- **Job Position Management**: Add and list job positions.
 - **Employer Management**: Register and list employers.
+- **Job Position Management**: Add and list job positions.
 - **Candidate Management**: Register and list job seekers.
 - **Job Advertisement Management**: Add, list, and filter job ads.
 - **Job Application Management**: Allow candidates to apply for job ads.
@@ -31,17 +31,17 @@ It follows the REST API architecture and implements **DTO**, **Request-Response 
 ---
 
 ##  Project Layers
-- **Entity**: Represents database tables.
-- **DTO**: Data Transfer Objects for API responses.
-- **Request**: Classes for incoming API data.
 - **Service**: Business logic layer.
-- **Repository (DAO)**: Database access layer.
 - **Controller**: REST API endpoints.
+- **Entity**: Represents database tables.
+- **Request**: Classes for incoming API data.
+- **Repository (DAO)**: Database access layer.
+- **DTO**: Data Transfer Objects for API responses.
 - **Core Utilities**: Common response classes like `Result`, `DataResult`, `SuccessResult`, `ErrorResult`.
 
 **Result Structure:**
-- `Result`: Returns success/failure status and a message.
 - `DataResult<T>`: Returns status + data.
+- `Result`: Returns success/failure status and a message.
 - `SuccessResult`, `ErrorResult`: Ready-made classes for success/error cases.
 
 ---
@@ -49,13 +49,13 @@ It follows the REST API architecture and implements **DTO**, **Request-Response 
 ##  Sample API Endpoints
 | HTTP | Endpoint | Description |
 |------|----------|-------------|
-| POST | `/api/employers/register` | Register a new employer |
 | GET  | `/api/employers/getAll` | Get all employers |
-| POST | `/api/candidateController/register` | Register a new candidate |
+| POST | `/api/employers/register` | Register a new employer |
 | GET  | `/api/candidateController/getAll` | Get all candidates |
 | POST | `/api/jobAdvertisements/add` | Add a new job advertisement |
 | GET  | `/api/jobAdvertisements/getAll` | Get all job advertisements |
 | POST | `/api/jobApplications/apply` | Apply for a job advertisement |
+| POST | `/api/candidateController/register` | Register a new candidate |
 
 ---
 
